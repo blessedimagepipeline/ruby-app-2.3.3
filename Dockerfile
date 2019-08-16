@@ -1,0 +1,6 @@
+FROM blimpacr.azurecr.io/ruby:master-2.3.3
+LABEL maintainer="Azure App Services Container Images <appsvc-images@microsoft.com>"
+
+COPY app /home/site/wwwroot
+
+CMD bundle install && /bin/init_container.sh
